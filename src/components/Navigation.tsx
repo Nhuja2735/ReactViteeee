@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
 const Navigation = () => {
@@ -8,17 +9,17 @@ const Navigation = () => {
         <Logo />
         
         <div className="flex items-center space-x-8">
-          <Button variant="nav" className="text-primary hover:text-primary/80">
-            Home
+          <Button variant="nav" className="text-primary hover:text-primary/80" asChild>
+            <Link to="/">Home</Link>
           </Button>
-          <Button variant="nav" className="text-primary hover:text-primary/80">
-            About
+          <Button variant="nav" className="text-primary hover:text-primary/80" asChild>
+            <Link to="/about">About</Link>
           </Button>
-          <Button variant="nav" className="text-primary hover:text-primary/80">
-            Programs
+          <Button variant="nav" className="text-primary hover:text-primary/80" asChild>
+            <Link to="/programs">Programs</Link>
           </Button>
-          <Button variant="nav" className="text-primary hover:text-primary/80">
-            Contact
+          <Button variant="nav" className="text-primary hover:text-primary/80" asChild>
+            <Link to="/contact">Contact</Link>
           </Button>
           <Button variant="nav" className="text-primary hover:text-primary/80">
             Login
